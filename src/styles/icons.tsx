@@ -1,17 +1,19 @@
+import inspiroIconTtf from './webfonts/inspiro-icons.ttf';
+import inspiroIconWof from './webfonts/inspiro-icons.woff';
+
+export default `
 @font-face {
     font-family: 'inspiro-icons';
     src:
-        local('inspiro-icons'),
-        url('./styles/webfonts/inspiro-icons.ttf?ijzgpf') format('truetype'),
-        url('./styles/webfonts/inspiro-icons.woff?ijzgpf') format('woff');
-    font-weight: normal;
+        url('${inspiroIconTtf}') format('truetype'),
+        url('${inspiroIconWof}') format('woff');
+    font-weight: normalt;
     font-style: normal;
     font-display: block;
-}
+};
 
 i:not(.fa):not(.fab):not(.far):not(.fas) {
-    font-family: inspiro-icons !important;
-    speak: none;
+    font-family: 'inspiro-icons' !important;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -19,8 +21,5 @@ i:not(.fa):not(.fab):not(.far):not(.fas) {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-activity:before {
-    content: '\e900'
-}
+};
+`
