@@ -69,17 +69,11 @@ const BreadCrumbItemA = styled.a`
     }
 `
 
-const Test = styled.section`
-   float: ${props => props.float}
-`
-
 export default function BreadCrumb(props: BreadCrumbProps) {
-    const { list, float } = props
+    const { list } = props
     return (
         <BreadCrumbWrapper float='left'>
             <BreadCrumbList>
-            <section customAttribute="test"></section>
-                <Test customAttribute='test'></Test>
                 {
                     list.map(element => {
                         return (
