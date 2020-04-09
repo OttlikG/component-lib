@@ -34,7 +34,7 @@ export default function Post(props: PostProps) {
                             top: 11px;
                             z-index: 3;
                             margin-right: 0px;
-                            padding: 2px 16px;
+                            padding: 4px 16px;
                             border-radius: 50px;
 
                             & a {
