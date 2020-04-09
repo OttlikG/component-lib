@@ -47,6 +47,12 @@
     "@storybook/preset-create-react-app": "^2.0.0",
     "@storybook/react": "^5.3.17",
     "@types/styled-components": "^5.0.1",
+    "babel-plugin-styled-components": "^1.10.7",
     "prettier": "^1.19.1"
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-styled-components"
+    ]
   }
 }
