@@ -1,4 +1,5 @@
 import React from 'react'
+import './all.min.css'
 
 export default ({ children }) => {
     return (
