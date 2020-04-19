@@ -1,6 +1,7 @@
+/// <reference types="styled-components/cssprop" />
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {} from 'styled-components/cssprop'
 
 import './index.css';
 import Home from './Home';

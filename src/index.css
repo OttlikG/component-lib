@@ -1,14 +1,3 @@
-@font-face {
-    font-family: 'inspiro-icons';
-    src:
-        local('inspiro-icons'),
-        url('./styles/webfonts/inspiro-icons.ttf?ijzgpf') format('truetype'),
-        url('./styles/webfonts/inspiro-icons.woff?ijzgpf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-
 i:not(.fa):not(.fab):not(.far):not(.fas) {
     font-family: inspiro-icons !important;
     speak: none;
