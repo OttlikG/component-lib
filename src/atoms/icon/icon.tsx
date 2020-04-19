@@ -5,7 +5,7 @@ import { IconProps, iconValues } from './icon.type'
 
 const IconI = styled.i`
 &:before {
-    content: \'${(props: IconProps) => iconValues[props.iconName]}';
+    content: \'${(props: IconProps): string => iconValues[props.iconName]}';
 }
 `
 
