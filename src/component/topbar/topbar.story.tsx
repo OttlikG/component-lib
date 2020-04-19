@@ -2,7 +2,7 @@ import React from 'react'
 import Topbar from './topbar'
 
 export default {
-    title: 'component/Topbar'
+    title: 'Component/Topbar'
 }
 
 export const basic = () => <Topbar />
