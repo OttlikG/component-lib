@@ -10,7 +10,8 @@ const Button = styled.a`
 
     font-size: 20px;
     position: absolute;
-
+    // top: 20px;
+    // right: 30px;
     padding: 12px;
     line-height: 12px;
     background-color: #2250fc;
@@ -18,12 +19,7 @@ const Button = styled.a`
     cursor: pointer;
     border-radius: 5px;
     color: #fff;
-    transition: opacity .5s, transform .5s;
-`
-
-export const CornerButton = styled(Button)`
-    top: 20px;
-    right: 30px;
+    transition: opacity .5s, transform .5s
 `
 
 export default function OverlayCloseButton () {
