@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import icons from '../../styles/icons'
 import { IconProps, iconValues } from './icon.type'
 
 const IconI = styled.i`
