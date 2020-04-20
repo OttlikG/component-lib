@@ -26,6 +26,14 @@ export const CornerButton = styled(Button)`
     right: 30px;
 `
 
+export function CornerOverlayCloseButton () {
+    return (
+        <CornerButton>
+            <Icon iconName='x' />
+        </CornerButton>
+    )
+}
+
 export default function OverlayCloseButton () {
     return (
         <Button aria-label="Close search form">
