@@ -3,5 +3,5 @@ export interface SearchProps {
 }
 
 export interface SearchOverlayProps {
-    isSearchOverlayOpen: boolean
+    isSearchOverlayOpen?: boolean
 }
