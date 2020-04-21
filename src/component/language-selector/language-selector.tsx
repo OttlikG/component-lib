@@ -12,10 +12,17 @@ const Dropdown = styled.div`
         opacity: 1;
         transform: scale(1);
         visibility: visible;
-    } 
+    }
+
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 80px;
+    display: flex;
+    align-items: center;
 `
 
 const DropdownA = styled.a`
+    position: relative;
     color: #484848;
 `
 
@@ -40,7 +47,7 @@ const DropdownList = styled.ul`
     visibility: hidden;
     transform: translateY(8px);
     padding: 14px 20px;
-    top: 20px;
+    top: 60px;
     width: min-content;
     margin: 0;
     border-radius: 4px;
