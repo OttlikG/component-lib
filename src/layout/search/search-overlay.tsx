@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { CornerOverlayCloseButton } from '../../atoms/button/overlay-close-button'
 import TypeSearch from '../../atoms/type-search/type-search'
-import { SearchOverlayProps } from './search-overlay.type'
+import { SearchProps, SearchOverlayProps } from './search-overlay.type'
 import useKeyboardEvent from '../../hooks/useKeyboardEvent'
 
 
 const Search = styled.div`
     z-index: 201;
     pointer-events: auto;
-    opacity: ${(props: SearchOverlayProps) => props.isOpen ? 1 : 0};
+    opacity: ${(props: SearchProps) => props.isOpen ? 1 : 0};
 
     display: flex;
     flex-direction: column;
@@ -26,8 +26,9 @@ const Search = styled.div`
     transition: opacity .5s;
 `
 
-export default function SearchOverlay () {
-    const [isOpen, setIsOpen] = useState(true)
+export default function SearchOverlay (props: SearchOverlayProps) {
+    const { isSearchOverlayOpen = false } = props;
+    const [isOpen, setIsOpen] = useState(isSearchOverlayOpen)
     
     useKeyboardEvent('Escape', () => {
         setIsOpen((state) => !state)

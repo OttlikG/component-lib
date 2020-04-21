@@ -5,4 +5,4 @@ export default {
     title: 'Layout/SearchOverlay'
 }
 
-export const basic = () => <SearchOverlay />
+export const basic = () => <SearchOverlay isSearchOverlayOpen />
