@@ -88,6 +88,50 @@ const HeaderExtrasA = styled.a`
     padding-right: 6px;
 `
 
+const MainMenu = styled.div`
+    padding: 0;
+`
+
+const MainMenuContainer = styled.div`
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+`
+const Nav = styled.nav`
+    float: right;
+`
+
+const MainMenuUl = styled.ul`
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+`
+
+const MainMenuLi = styled.li`
+    float: left;
+    border: 0;
+    transition: all .3s ease;
+    margin-left: 6px;
+    position: relative;
+`
+
+const MainMenuLink = styled.a`
+    position: relative;
+    font-family: poppins,sans-serif;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    color: #000;
+    border-radius: 0;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    transition: all .3s ease;
+    line-height: normal;
+`
+
 export default function HeaderComponent() {
     return (
         <Header id="header" data-fullwidth="true" className="">
@@ -100,7 +144,7 @@ export default function HeaderComponent() {
                         </LogoA>
                     </Logo>
 
-                    {/* <SearchOverlay /> */}
+                    <SearchOverlay />
 
                     <HeaderExtras className="header-extras">
                         <HeaderExtrasUl>
@@ -119,15 +163,15 @@ export default function HeaderComponent() {
                         <a className="lines-button x"><span className="lines"></span></a>
                     </div>
 
-                    <div id="mainMenu">
-                        <div className="container">
-                            <nav>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                    <MainMenu id="mainMenu">
+                        <MainMenuContainer className="container">
+                            <Nav>
+                                <MainMenuUl>
+                                    <MainMenuLi><MainMenuLink href="index.html">Home</MainMenuLink></MainMenuLi>
+                                </MainMenuUl>
+                            </Nav>
+                        </MainMenuContainer>
+                    </MainMenu>
 
                 </Container>
             </HeaderInner>
