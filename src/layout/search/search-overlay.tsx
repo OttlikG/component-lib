@@ -9,7 +9,6 @@ import useKeyboardEvent from '../../hooks/useKeyboardEvent'
 const Search = styled.div`
     z-index: 201;
     pointer-events: auto;
-    opacity: ${(props: SearchProps) => props.isOpen ? 1 : 0};
 
     display: flex;
     flex-direction: column;
@@ -24,6 +23,11 @@ const Search = styled.div`
     width: 100%;
     height: 100vh;
     transition: opacity .5s;
+
+    // Hide search content
+    opacity: ${(props: SearchProps) => props.isOpen ? 1 : 0};
+    height: ${(props: SearchProps) => props.isOpen ? 'auto' : 0};
+    overflow: ${(props: SearchProps) => props.isOpen ? 'auto' : 'hidden'};
 `
 
 export default function SearchOverlay (props: SearchOverlayProps) {
