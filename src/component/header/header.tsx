@@ -168,6 +168,8 @@ export default function HeaderComponent() {
                             <Nav>
                                 <MainMenuUl>
                                     <MainMenuLi><MainMenuLink href="index.html">Home</MainMenuLink></MainMenuLi>
+                                    <MainMenuLi><MainMenuLink href="index.html">Layout</MainMenuLink></MainMenuLi>
+                                    <MainMenuLi><MainMenuLink href="index.html">Features</MainMenuLink></MainMenuLi>
                                 </MainMenuUl>
                             </Nav>
                         </MainMenuContainer>
