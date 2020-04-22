@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Icon from '../icon/icon'
+import { CornerOverlayCloseButtonProps } from './overlay-close-button.type'
 
 const Button = styled.a`
     display: block;
@@ -26,9 +27,10 @@ export const CornerButton = styled(Button)`
     right: 30px;
 `
 
-export function CornerOverlayCloseButton () {
+export function CornerOverlayCloseButton (props: CornerOverlayCloseButtonProps) {
+    const { setIsSearchClicked } = props
     return (
-        <CornerButton>
+        <CornerButton onClick={() => setIsSearchClicked(false)}>
             <Icon iconName='x' />
         </CornerButton>
     )

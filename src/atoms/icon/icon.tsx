@@ -9,13 +9,13 @@ const IconI = styled.i`
 `
 
 export default function Icon(props: IconProps) {
-    const { iconName } = props
+    const { iconName, onClickHandler } = props
 
     if (!iconName) {
         throw Error('You must specify an icon name!')
     }
 
     return (
-        <IconI iconName={iconName}></IconI>
+        <IconI iconName={iconName} onClick={onClickHandler} ></IconI>
     )
 }

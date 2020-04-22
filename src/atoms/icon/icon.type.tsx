@@ -12,5 +12,6 @@ type IconValuesTypes = {
 }
 
 export interface IconProps {
-    iconName: 'activity' | 'chevron-right' | string
+    iconName: 'activity' | 'chevron-right' | string,
+    onClickHandler?: Function
 }

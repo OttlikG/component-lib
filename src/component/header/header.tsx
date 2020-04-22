@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import SearchOverlay from '../../layout/search/search-overlay'
 import Icon from '../../atoms/icon/icon'
@@ -133,6 +133,7 @@ const MainMenuLink = styled.a`
 `
 
 export default function HeaderComponent() {
+    const [isSearchClicked, setIsSearchClicked] = useState(false)
     return (
         <Header id="header" data-fullwidth="true" className="">
             <HeaderInner className="header-inner">
@@ -144,13 +145,13 @@ export default function HeaderComponent() {
                         </LogoA>
                     </Logo>
 
-                    <SearchOverlay />
+                    <SearchOverlay isSearchOverlayOpen={isSearchClicked} setIsSearchClicked={setIsSearchClicked} />
 
                     <HeaderExtras className="header-extras">
                         <HeaderExtrasUl>
                             <HeaderExtrasLi>
                                 <HeaderExtrasA id="btn-search" href="#">
-                                    <Icon iconName='search' />
+                                    <Icon iconName='search' onClickHandler={() => setIsSearchClicked(true)} />
                                 </HeaderExtrasA>
                             </HeaderExtrasLi>
                             <HeaderExtrasLi>
@@ -174,7 +175,6 @@ export default function HeaderComponent() {
                             </Nav>
                         </MainMenuContainer>
                     </MainMenu>
-
                 </Container>
             </HeaderInner>
         </Header>
