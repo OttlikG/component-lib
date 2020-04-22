@@ -5,4 +5,5 @@ export default {
     title: 'Layout/SearchOverlay'
 }
 
-export const basic = () => <SearchOverlay isSearchOverlayOpen />
+const nope = () => {}
+export const basic = () => <SearchOverlay isSearchOverlayOpen setIsSearchClicked={nope} />
