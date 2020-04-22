@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import SearchOverlay from '../../layout/search/search-overlay'
+import Icon from '../../atoms/icon/icon'
+import LanguageSelector from '../language-selector/language-selector'
 
 const Header = styled.header`
     position: relative;
-    with: 100%;
+    width: 100%;
     z-index: 199 !important;
     height: 80px;
     line-height: 80px;
@@ -15,13 +17,13 @@ const HeaderInner = styled.div`
     background-color: #fff;
     left: 0;
     right: 0;
-    transition: all 4s ease-in-out
+    transition: all 4s ease-in-out;
 `
 
 const Container = styled.div`
     position: relative;
 
-    max-width: 100%
+    max-width: 100%;
     padding: 0 30px;
 `
 
@@ -55,12 +57,42 @@ const LogoSpanClosed = styled(LogoSpan)`
     display: none;
 `
 
+const HeaderExtras = styled.div`
+    float: right;
+    z-index: 199;
+    position: relative;
+    height: 80px;
+`
+
+const HeaderExtrasUl = styled.ul`
+    list-style: none;
+    margin: 0;
+    padding: 0;
+`
+
+const HeaderExtrasLi = styled.li`
+    float: left;
+    border: 0;
+`
+
+const HeaderExtrasA = styled.a`
+    font-family: poppins,sans-serif;
+    font-size: 12px;
+    position: relative;
+    display: block;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    padding-left: 6px;
+    padding-right: 6px;
+`
+
 export default function HeaderComponent() {
     return (
         <Header id="header" data-fullwidth="true" className="">
             <HeaderInner className="header-inner">
                 <Container className="container">
-
                     <Logo id="logo">
                         <LogoA href="index.html">
                             <LogoSpan className="logo-default">POLO</LogoSpan>
@@ -68,25 +100,20 @@ export default function HeaderComponent() {
                         </LogoA>
                     </Logo>
 
-                    <SearchOverlay />
+                    {/* <SearchOverlay /> */}
 
-                    <div className="header-extras">
-                        <ul>
-                            <li>
-                                <a id="btn-search" href="#"> <i className="icon-search"></i></a>
-                            </li>
-                            <li>
-                                <div className="p-dropdown">
-                                    <a href="#"><i className="icon-globe"></i><span>EN</span></a>
-                                    <ul className="p-dropdown-content">
-                                        <li><LogoA href="#">French</LogoA></li>
-                                        <li><a className="test-poppins" href="#">French</a></li>
-                                        <li><a href="#">English</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    <HeaderExtras className="header-extras">
+                        <HeaderExtrasUl>
+                            <HeaderExtrasLi>
+                                <HeaderExtrasA id="btn-search" href="#">
+                                    <Icon iconName='search' />
+                                </HeaderExtrasA>
+                            </HeaderExtrasLi>
+                            <HeaderExtrasLi>
+                                <LanguageSelector />
+                            </HeaderExtrasLi>
+                        </HeaderExtrasUl>
+                    </HeaderExtras>
 
                     <div id="mainMenu-trigger">
                         <a className="lines-button x"><span className="lines"></span></a>
