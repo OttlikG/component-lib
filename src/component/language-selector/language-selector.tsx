@@ -77,12 +77,12 @@ const DropdownListA = styled.a`
 
 export default function LanguageSelector() {
     return (
-        <Dropdown class="p-dropdown">
+        <Dropdown className="p-dropdown">
             <DropdownA href="#">
                 <Icon iconName='globe' />
                 <DropdownSelectedLanguage>EN</DropdownSelectedLanguage>
             </DropdownA>
-            <DropdownList class="p-dropdown-content">
+            <DropdownList className="p-dropdown-content">
                 <DropdownLi>
                     <DropdownListA href="#">French</DropdownListA>
                 </DropdownLi>
