@@ -9,4 +9,6 @@ import Home from './Home';
 import './styles/webfonts/inspiro-icons.ttf'
 import './styles/webfonts/inspiro-icons.woff'
 
+export { default as Header } from './component/header/header'
+
 ReactDOM.render(<Home />, document.getElementById('root'));
