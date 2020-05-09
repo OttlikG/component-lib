@@ -12,6 +12,10 @@ type IconValuesTypes = {
     [index: string]: string
 }
 
+export interface IconIProps {
+    iconName: 'activity' | 'chevron-right' | string,
+    onClick: any
+}
 export interface IconProps {
     iconName: 'activity' | 'chevron-right' | string,
     onClickHandler?: Function

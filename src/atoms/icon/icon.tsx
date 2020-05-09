@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IconProps, iconValues } from './icon.type'
+import { IconProps, IconIProps, iconValues } from './icon.type'
 
-const IconI = styled.i`
+const IconI = styled.i<IconIProps>`
 &:before {
     content: \'${(props: IconProps): string => iconValues[props.iconName]}';
 }
